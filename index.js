@@ -1,5 +1,5 @@
 const carReport = {
-    cars: [{
+     cars: [{
         id: 1,
         name: 'Ford',
         color: 'white',
@@ -34,8 +34,16 @@ const carReport = {
     ]
 };
 
-for(i=0; i < 3; i++) {
-    console.log(carReport)
-}
 
-//console.log(carReport);
+console.log(carReport);
+console.log("-- FOR LOOP --");
+console.log('-- ES5 --') 
+// ES5 Loop
+for (let i = 0; i < carReport.cars.length; i++){
+        console.log(carReport.cars[i].name)
+    }
+console.log('-- ES6 --')    
+// ES6 Loop
+for (let {name} of carReport.cars) {
+        console.log(name);
+      }
